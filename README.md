@@ -38,22 +38,23 @@ The `entry()` method can also expect multiple items at once, using a nested arra
 
 ```php
 $feed->entry([
-        'title' => 'Post Two',
-        'link' => 'https://example.com/blog/post-two',
-        'summary' => 'This is my second summary',
-        'content' => '<p>This is my second example content!</p>'
-    ], [
-        'title' => 'Post Three',
-        'link' => 'https://example.com/blog/post-three',
-        'summary' => 'This is my third summary',
-        'content' => '<p>This is my third example content!</p>'
-    ]);
+    'title' => 'Post Two',
+    'link' => 'https://example.com/blog/post-two',
+    'summary' => 'This is my second summary',
+    'content' => '<p>This is my second example content!</p>'
+], [
+    'title' => 'Post Three',
+    'link' => 'https://example.com/blog/post-three',
+    'summary' => 'This is my third summary',
+    'content' => '<p>This is my third example content!</p>'
+]);
 ```
 
 You can then use either the `asAtom()` or `asRss()` method to compile the feed to the requested format and return it as an XML string:
 
 ```php
-$xml = $feed->asAtom(); // $feed->asRss();
+$xml = $feed->asAtom();
+// $xml = $feed->asRss();
 ```
 
 ## Requirements
