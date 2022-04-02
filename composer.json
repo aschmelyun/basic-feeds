@@ -1,0 +1,38 @@
+{
+    "name": "aschmelyun/basic-feeds",
+    "type": "library",
+    "description": "A simple PHP library to generate RSS and Atom feeds",
+    "keywords": [
+        "php",
+        "rss",
+        "atom",
+        "xml",
+        "feeds"
+    ],
+    "homepage": "https://github.com/aschmelyun/basic-feeds",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Schmelyun",
+            "email": "me@aschmelyun.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aschmelyun\\BasicFeeds\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aschmelyun\\BasicFeeds\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
