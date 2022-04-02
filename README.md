@@ -16,23 +16,25 @@ Initialize a feed by using the `Feed::create()` method, passing in an array of a
 use Aschmelyun\BasicFeeds\Feed;
 
 $feed = Feed::create([
-    'link' => 'https://aschmelyun.com/blog',
+    'link' => 'https://example.com/blog',
     'authors' => 'Andrew Schmelyun',
-    'title' => 'My Blog',
-    'feed' => 'https://aschmelyun.com/feed.xml',
+    'title' => 'My Example Blog',
+    'feed' => 'https://example.com/feed.xml',
 ]);
 ```
 
+Then use the `entry()` method on the Feed object to attach entries to your feed.
+
 ```php
 $feed->entry([
-        'title' => 'Post One',
-        'link' => 'https://example.com/blog/post-one',
-        'summary' => 'This is my summary',
-        'content' => '<p>This is my example content!</p>'
-    ]);
+    'title' => 'Post One',
+    'link' => 'https://example.com/blog/post-one',
+    'summary' => 'This is my summary',
+    'content' => '<p>This is my example content!</p>'
+]);
 ```
 
-The Feed's entry method can also expect multiple items at once, using a nested array:
+The `entry()` method can also expect multiple items at once, using a nested array.
 
 ```php
 $feed->entry([
@@ -51,7 +53,7 @@ $feed->entry([
 You can then use either the `asAtom()` or `asRss()` method to compile the feed to the requested format and return it as an XML string:
 
 ```php
-$xml = $feed->asAtom();
+$xml = $feed->asAtom(); // $feed->asRss();
 ```
 
 ## Requirements
